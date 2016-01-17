@@ -1,9 +1,9 @@
-package com.example.service;
+package com.andigital.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.model.Person;
+import com.andigital.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

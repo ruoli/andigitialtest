@@ -1,6 +1,6 @@
-# Spring MVC and Hibernate template application
+# Spring MVC application for Andigital Test
 
-This is a template for a web application that uses Spring MVC and Hibernate. The sample code is a simple CRUD page that manipulates records for a single model object.
+This is a web application that uses Spring MVC and Hibernate.
 
 ## Running the application locally
 

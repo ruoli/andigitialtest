@@ -13,12 +13,7 @@
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <!--
-      IMPORTANT:
-      This is Heroku specific styling. Remove to customize.
-    -->
     <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-    <!-- /// -->
 
 </head>
 
@@ -26,8 +21,8 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a href="/" class="brand">Spring MVC and Hibernate Template</a>
-            <a href="/" class="brand" id="heroku">by <strong>heroku</strong></a>
+            <a href="/" class="brand">Spring MVC and Hibernate App For AnDigitalTest</a>
+            <a href="/" class="brand" id="heroku">by <strong>Ruoli</strong></a>
         </div>
     </div>
 </div>

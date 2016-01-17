@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.andigital.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.model.Person;
-import com.example.service.PersonService;
+import com.andigital.model.Person;
+import com.andigital.service.PersonService;
 
 import java.util.Map;
 
@@ -19,7 +19,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping("/")
+    @RequestMapping("/people")
     public String listPeople(Map<String, Object> map) {
 
         map.put("person", new Person());
@@ -33,7 +33,7 @@ public class PersonController {
 
         personService.addPerson(person);
 
-        return "redirect:/people/";
+        return "redirect:/people";
     }
 
     @RequestMapping("/delete/{personId}")
@@ -41,6 +41,6 @@ public class PersonController {
 
         personService.removePerson(personId);
 
-        return "redirect:/people/";
+        return "redirect:/people";
     }
 }

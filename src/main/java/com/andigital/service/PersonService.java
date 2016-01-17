@@ -1,9 +1,9 @@
-package com.example.service;
+package com.andigital.service;
 
 
 import java.util.List;
 
-import com.example.model.Person;
+import com.andigital.model.Person;
 
 public interface PersonService {
     
