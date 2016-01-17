@@ -18,14 +18,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a href="/" class="brand">Spring MVC and Hibernate App For AnDigitalTest</a>
-            <a href="/" class="brand" id="heroku">by <strong>Ruoli</strong></a>
-        </div>
-    </div>
-</div>
+
+
+<%@ include file="brand.jsp" %>
 
 <div class="container">
     <div class="row">
@@ -33,30 +28,28 @@
             <div class="page-header">
                 <h1></h1>
             </div>
-            <form:form method="post" action="add" commandName="person" class="form-vertical">
-
-                <form:label path="firstName">First Name</form:label>
-                <form:input path="firstName" />
-                <form:label path="lastName">Last Name</form:label>
-                <form:input path="lastName" />
-                <input type="submit" value="Add Person" class="btn"/>
-            </form:form>
 
 
-            <c:if  test="${!empty peopleList}">
-                <h3>People</h3>
+            <c:if  test="${!empty favouriteList}">
+                <h3>Here are your favourite Venues!</h3>
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Venue Name</th>
+                        <th>Venue Contact No.</th>
+                        <th>Venue Address</th>
+                        <th>Venue Distance</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${peopleList}" var="person">
+                    <c:forEach items="${searchResultsList}" var="result">
                         <tr>
-                            <td>${person.lastName}, ${person.firstName}</td>
-                            <td><form action="delete/${person.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
+                            <td>${result.venueName}</td>
+                            <td>${result.contactNumber}</td>
+                            <td>${result.address}</td>
+                            <td>${result.distance}</td>
+                            <td><form action="delete/${result.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
                         </tr>
                     </c:forEach>
                     </tbody>
