@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.andigital.model.RestfulDataObject;
 import com.andigital.model.SearchResult;
 import com.andigital.model.Venues;
-import com.andigital.service.dao.SavedSearchResultService;
+import com.andigital.service.SavedSearchResultService;
+
 import static com.andigital.utility.RestfulUtil.*;
 
 @Controller
@@ -27,7 +28,7 @@ public class SearchController {
 	
 	@RequestMapping("/index")
     public String listHistoryResults(Map<String, Object> map, HttpServletRequest request) {
-
+		
         map.put("searchResultsList", getTempCacheSearchResultsList());
 
         return "index";
@@ -36,7 +37,7 @@ public class SearchController {
 	@RequestMapping("/save/{listposition}")
 	public String addMyFavouriteToDatabase(@PathVariable("listposition") int listPosition) {
 		savedSearchResultService.addNewSavedHistory(getTempCacheSearchResultsList().get(listPosition));
-		return "redirect:/index";
+		return "redirect:/favourite";
 	}
 
 	@RequestMapping(value = "/search", method = RequestMethod.POST)

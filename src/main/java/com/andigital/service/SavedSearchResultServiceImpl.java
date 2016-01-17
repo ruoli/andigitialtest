@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.andigital.model.SearchResult;
-import com.andigital.service.dao.SavedSearchResultService;
 
 @Service
-public class SearchResultServiceImpl implements SavedSearchResultService{
+public class SavedSearchResultServiceImpl implements SavedSearchResultService{
 	@PersistenceContext
     EntityManager em;
 	

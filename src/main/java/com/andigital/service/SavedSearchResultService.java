@@ -1,4 +1,4 @@
-package com.andigital.service.dao;
+package com.andigital.service;
 
 import java.util.List;
 

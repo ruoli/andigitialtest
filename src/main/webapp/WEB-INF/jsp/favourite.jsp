@@ -43,7 +43,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${searchResultsList}" var="result">
+                    <c:forEach items="${favouriteList}" var="result">
                         <tr>
                             <td>${result.venueName}</td>
                             <td>${result.contactNumber}</td>
